@@ -22,6 +22,7 @@
   margin-left: 4rem;
   font-size: 2rem;
   font-weight: bolder;
+  margin-top: 2rem;
 }
 
 .signup {
@@ -30,6 +31,7 @@
   width: 25%;
   margin: 3rem 0rem;
   margin-left: 4rem;
+  margin-bottom: 5rem;
 }
 
 .signup .error {
@@ -68,13 +70,13 @@
 }
 
 .signup button {
-  margin-top: 1rem;
+  margin: 1rem 0rem;
   height: 30px;
-  width: 60%;
+  /* width: 60%; */
   border-radius: 20px;
   outline: none;
   border: none;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 4rem;
   cursor: pointer;
   background: rgb(211, 152, 43);
   color: white;
@@ -93,4 +95,27 @@
 .signup a {
   color: white;
   /* text-decoration: none; */
+}
+
+/* CSS for Responsiveness */
+@media (max-width: 600px) {
+  .signup-container {
+    align-items: center;
+  }
+
+  .signup-container h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .signup {
+    width: 50%;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+
+  .signup h4 {
+    font-size: 1rem;
+  }
 }

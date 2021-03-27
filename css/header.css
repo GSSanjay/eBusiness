@@ -49,3 +49,48 @@ a {
   border-radius: 20px;
   color: black;
 }
+
+/* CSS for Responsiveness */
+@media (max-width: 600px) {
+  #logo {
+    font-size: 1.5rem;
+  }
+  #navbar {
+    padding: 1rem 1rem;
+  }
+  #nav-items li a {
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+  }
+  .box {
+    margin: 1rem 1rem;
+  }
+  .box h1 {
+    margin: 0.5rem;
+  }
+  .primary-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  #logo {
+    font-size: 3rem;
+  }
+  #navbar {
+    padding: 1rem 1rem;
+  }
+  #nav-items li a {
+    padding: 0.2rem 1rem;
+    font-size: 1.5rem;
+  }
+  .box {
+    margin: 1rem 1rem;
+  }
+  .box h1 {
+    margin: 0.5rem;
+  }
+  .primary-heading {
+    font-size: 3rem;
+  }
+}
