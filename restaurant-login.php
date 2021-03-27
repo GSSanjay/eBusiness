@@ -53,9 +53,9 @@
 
     <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
         <?php include("logo.html") ?>
-        <div class="signup-container">
+        <div class="container">
             <h1>Login as a restaurant</h1>
-            <div class="signup">
+            <div class="box">
                 <span class="error"><?php echo $form_error; ?></span>
                 <span><label for="restaurant_email">Email</label><span class="error"></span></span>
                 <input type="email" name="restaurant_email" id="restaurant_email" required/>

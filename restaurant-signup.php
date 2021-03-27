@@ -54,9 +54,9 @@
 
     <form action="" method="POST">
         <?php include("logo.html") ?>
-        <div class="signup-container">
+        <div class="container">
             <h1>Sign up to register your restaurant</h1>
-            <div class="signup">
+            <div class="box">
                 <span class="error"><?php echo $form_error; ?></span>
                 <span><label for="restaurant_name">Restaurant Name</label><span class="error"></span></span>
                 <input type="text" name="restaurant_name" id="restaurant_name" required/>

@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-.signup-container {
+.container {
   background: url("../images/custlogin-bg.jpg");
   background-size: cover;
   display: flex;
@@ -16,7 +16,7 @@
   height: 100%;
 }
 
-.signup-container h1 {
+.container h1 {
   /* margin-bottom: 1rem; */
   color: white;
   margin-left: 4rem;
@@ -25,7 +25,7 @@
   margin-top: 2rem;
 }
 
-.signup {
+.box {
   display: flex;
   flex-direction: column;
   width: 25%;
@@ -34,19 +34,19 @@
   margin-bottom: 5rem;
 }
 
-.signup .error {
+.box .error {
   color: #ff6a00;
   /* text-align: right; */
   margin-left: 2rem;
 }
 
-.signup label {
+.box label {
   color: #fbff00;
   font-weight: bolder;
   /* margin: 0.2rem 0rem; */
 }
 
-.signup input {
+.box input {
   height: 30px;
   /* border-radius: 20px; */
   outline: none;
@@ -54,22 +54,22 @@
   margin: 0.5rem 0rem;
 }
 
-.signup div {
+.box div {
   text-align: center;
 }
 
-.signup .preference {
+.box .preference {
   text-align: left;
   display: flex;
   align-items: center;
   color: white;
 }
 
-.signup .preference input[type="radio"] {
+.box .preference input[type="radio"] {
   margin: 0rem 1rem;
 }
 
-.signup button {
+.box button {
   margin: 1rem 0rem;
   /* height: 30px; */
   /* width: 60%; */
@@ -84,44 +84,44 @@
   /* line-height: 30px; */
 }
 
-.signup button:hover {
+.box button:hover {
   background-color: rgb(223, 222, 222);
   color: black;
 }
 
-.signup .login-btn {
+.box .login-btn {
   padding: 0.5rem 4rem;
 }
 
-.signup h4 {
+.box h4 {
   color: white;
   font-size: 1.2rem;
 }
 
-.signup a {
+.box a {
   color: #fcff49;
   /* text-decoration: none; */
 }
 
 /* CSS for Responsiveness */
 @media (max-width: 600px) {
-  .signup-container {
+  .container {
     align-items: center;
   }
 
-  .signup-container h1 {
+  .container h1 {
     font-size: 1.5rem;
     text-align: center;
     margin-left: 0;
   }
 
-  .signup {
+  .box {
     width: 50%;
     margin-top: 2rem;
     margin-left: 0;
   }
 
-  .signup h4 {
+  .box h4 {
     font-size: 1rem;
   }
 }

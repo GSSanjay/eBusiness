@@ -55,9 +55,9 @@
 
     <form action="" method="POST">
         <?php include("logo.html") ?>
-        <div class="signup-container">
+        <div class="container">
             <h1>Ready to taste your favorite food? </br>Sign up below</h1>
-            <div class="signup">
+            <div class="box">
                 <span class="error"><?php echo $form_error; ?></span>
                 <span><label for="customer_name">Name</label><span class="error"></span></span>
                 <input type="text" name="customer_name" id="customer_name" required/>
