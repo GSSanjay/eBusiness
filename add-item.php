@@ -75,7 +75,7 @@
             <h1>Add a new Item</h1>
             <div class="box">
                 <?php $success_message = $_GET["success_message"]; ?>
-                <span class="error"><?php echo $success_message; ?></span>
+                <span class="success"><?php echo $success_message; ?></span>
                 <span class="error"><?php echo $form_error; ?></span>
                 <span><label for="item_name">Item Name</label><span class="error"></span></span>
                 <input type="text" name="item_name" id="item_name" required/>

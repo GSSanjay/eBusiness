@@ -36,6 +36,10 @@
   text-align: right;
   margin-left: 2rem;
 }
+.box .success {
+  color: #7ef740;
+  text-align: right;
+}
 
 .box label {
   color: #fbff00;

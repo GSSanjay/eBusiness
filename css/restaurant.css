@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: violet;
+  /* height: 100vh; */
+  /* width: 100%; */
+  display: flex;
+}
+
+.box1 {
+  background-color: teal;
+  width: 20%;
+  height: 200px;
+}
+
+.box2 {
+  display: flex;
+  width: 80%;
+  height: 200px;
+  background-color: rgb(77, 0, 128);
+}
+
+.logout {
+  margin-left: auto;
+}
+
+.box2 button {
+  height: 20px;
+}
