@@ -7,7 +7,7 @@
     <title>Foodshala</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/utils.css" />
     <!-- <link rel="stylesheet" href="css/header.css"/>
     <link rel="stylesheet" href="css/footer.css"/> -->
     

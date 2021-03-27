@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order your food</title>
     <link rel="stylesheet" href="css/food.css"/>
-    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/utils.css"/>
     <!-- <link rel="stylesheet" href="css/header.css"/>
     <link rel="stylesheet" href="css/footer.css"/> -->
     
@@ -45,10 +45,10 @@
                                         <p id="restaurant_name">'. $row["restaurant_name"] .'</p>
                                         <div class="quantity">
                                             <!--<button id="minus'.$row["item_id"].'" onclick="minus(this.id)">-</button>-->
-                                            <input type="number" name="qty" id="qty" min="0" value="0"/>
+                                            <input type="number" name="qty" id="qty" min="1" max="100" value="1" required/>
                                             <!--<button id="plus'.$row["item_id"].'" onclick="plus(this.id)">+</button>-->
                                         </div>
-                                        <div><button id="btn-order'.$row["item_id"].'" class="btn-order" onclick="submitOrder(this.id)">Order</button></div>
+                                        <div><button type="submit" id="btn-order'.$row["item_id"].'" class="btn-order" onclick="submitOrder(this.id)">Order</button></div>
                                     <!--</form>-->
                                 </article>
                             <!--</form>-->
@@ -56,7 +56,7 @@
                     }
                 }
                 else{
-                    echo "No results";
+                    echo "No items found";
                 }
                 $conn->close();
             ?>

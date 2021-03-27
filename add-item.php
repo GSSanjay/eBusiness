@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/add-item.css"/>
-    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/utils.css" />
     <title>Restaurant | Add Item</title>
 </head>
 <body>

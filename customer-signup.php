@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/customer-signup.css"/>
-    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/utils.css"/>
     <title>Signup</title>
 </head>
 <body>
@@ -68,7 +68,7 @@
                 <span><label for="customer_cpassword">Confirm Password</label><span class="error"></span></span>
                 <input type="password" name="customer_cpassword" id="customer_cpassword" required/>
                 <span><label for="customer_phone">Phone</label><span class="error"></span></span>
-                <input type="number" name="customer_phone" id="customer_phone" required/>
+                <input type="tel" name="customer_phone" id="customer_phone" pattern="[0-9]{10}" required/>
                 <span><label for="customer_preference">Preference</label><span class="error"></span></span>
                 <div class="preference">
                     <input type="radio" value="Veg" name="customer_preference" id="customer_preference" required>Veg</input>

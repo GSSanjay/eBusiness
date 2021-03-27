@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/restaurant-signup.css"/>
-    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/utils.css" />
     <title>Restaurant Signup</title>
 </head>
 <body>
@@ -67,7 +67,7 @@
                 <span><label for="restaurant_cpassword">Confirm Password</label><span class="error"></span></span>
                 <input type="password" name="restaurant_cpassword" id="restaurant_cpassword" required/>
                 <span><label for="restaurant_phone">Phone</label><span class="error"></span></span>
-                <input type="number" name="restaurant_phone" id="restaurant_phone" required/>
+                <input type="tel" name="restaurant_phone" id="restaurant_phone" pattern="[0-9]{10}" required/>
                 <span><label for="restaurant_details">Restaurant Details</label><span class="error"></span></span>
                 <textarea name="restaurant_details" rows="4" cols="50" id="restaurant_details"></textarea>
                 <div>

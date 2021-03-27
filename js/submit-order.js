@@ -9,7 +9,15 @@ const submitOrder = (id) => {
   let item_price = parentElem.querySelector("#item_price").innerHTML;
   let qty = parentElem.querySelector("#qty").value;
 
-  console.log(item_name, restaurant_name, qty);
+  if (qty <= 0) {
+    alert("Please choose quantity at least 1");
+  } else if (qty >= 100) {
+    alert(
+      "Maximum number of quantity is 100. Please choose up to 100 quantity."
+    );
+  } else {
+    console.log(item_name, restaurant_name, qty);
 
-  window.location.href = `order.php?item_name=${item_name}&item_price=${item_price}&restaurant_name=${restaurant_name}&qty=${qty}`;
+    window.location.href = `order.php?item_name=${item_name}&item_price=${item_price}&restaurant_name=${restaurant_name}&qty=${qty}`;
+  }
 };
