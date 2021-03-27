@@ -55,8 +55,12 @@
 
             if($query_insert_db){
                 $success_message = "Item added";
+                echo "Item added";
+                header("location:add-item.php?success_message=".$success_message);
+
+                // echo "<meta http-equiv='refresh' content='0'>";
                 // header('Location: '.$_SERVER['REQUEST_URI']);
-                echo "<script type='text/javascript'>location.reload(true);</script>";
+                // echo "<script type='text/javascript'>location.reload(true);</script>";
                 // echo "<script>window.location.href='add-item.php'</script>";
             }
             else{
@@ -70,6 +74,7 @@
         <div class="container">
             <h1>Add a new Item</h1>
             <div class="box">
+                <?php $success_message = $_GET["success_message"]; ?>
                 <span class="error"><?php echo $success_message; ?></span>
                 <span class="error"><?php echo $form_error; ?></span>
                 <span><label for="item_name">Item Name</label><span class="error"></span></span>
@@ -93,6 +98,7 @@
             </div>
         </div>
     </form>
+    <!-- <script>location.reload(true);</script> -->
     <?php include("footer.html") ?>
 </body>
 </html>
