@@ -19,18 +19,18 @@
 <body>
     <?php include("logo.html") ?>
     <section class="container">
-        <div class="box1">
-            <ul>
-                <li><a href="">Add Items</a></li>
-                <li><a href="">View Items</a></li>
-                <li><a href="">View Orders</a></li>
-            </ul>
+        <div class="box">
+            <h2>Hey <?php echo $_SESSION['customer_name']; ?></h2>
+            <div class="box1">
+                <ul>
+                    <li><a href="">Food Menu</a></li>
+                    <li><a href="">View Orders</a></li>
+                    <!-- <li><a href="customer-logout.php">Logout</a></li> -->
+                </ul>
+            </div>
         </div>
-
-        <div class="box2">
-        <h2>Hey <?php echo $_SESSION['customer_name']; ?></h2>
         <div class="logout"><a href="customer-logout.php">Logout</a></div>
-        </div>
     </section>
+    <?php include("footer.html") ?>
 </body>
 </html>

@@ -9,6 +9,30 @@
   margin-bottom: 2rem;
   min-height: 100%;
 }
+
+.second-section .first-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.second-section h4 {
+  margin: 2rem;
+}
+
+.second-section .logout {
+  /* margin: 2rem; */
+}
+
+.second-section .logout a {
+  color: black;
+  margin: 2rem;
+  color: #dba225;
+  border: 1px solid black;
+  text-align: center;
+  padding: 0.3rem 1rem;
+}
+
 .second-section .section-title {
   text-align: center;
   margin: 1rem 0rem;
@@ -112,4 +136,8 @@
 
 .restaurant div .btn-order:hover {
   background-color: rgb(211, 152, 43);
+}
+
+.restaurant div a {
+  color: white;
 }

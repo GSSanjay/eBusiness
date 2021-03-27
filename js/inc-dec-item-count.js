@@ -1,17 +1,31 @@
 // alert("Hello");
 
-let count = 0;
+let minusBtn = document.querySelector("#minus");
+let plusBtn = document.querySelector("#plus");
+
+minusBtn.addEventListener("click", minus);
+plusBtn.addEventListener("click", plus);
+
 const plus = (id) => {
+  let count = 0;
   console.log(id);
   count++;
   let plus = document.querySelector("#" + id);
-  let parentElem = plus.parentElement;
+  let parentElem = plus.parentElement.parentElement;
   console.log(parentElem);
+  console.log(parentElem.querySelector("#qty"));
   parentElem.querySelector("#qty").value = count;
 };
 
 const minus = (id) => {
+  let count = 0;
   console.log(id);
+  count--;
+  let minus = document.querySelector("#" + id);
+  let parentElem = minus.parentElement.parentElement;
+  console.log(parentElem);
+  console.log(parentElem.querySelector("#qty"));
+  parentElem.querySelector("#qty").value = count;
 };
 
 /* let qty = document.querySelector("#qty");

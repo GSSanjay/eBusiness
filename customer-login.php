@@ -18,7 +18,7 @@
         include("config/db-connect.php");
         $form_error = "";
 
-        if(isset($_POST)){
+        if(isset($_POST["submit"])){
             $customer_email = $_POST["customer_email"];
             $customer_password = $_POST["customer_password"];
 
@@ -30,13 +30,17 @@
                 $restaurant = mysqli_fetch_assoc($result);
                 $customer_password_db = $restaurant['customer_password'];
                 $_SESSION['customer_name'] = $restaurant['customer_name'];
+                $_SESSION['customer_email'] = $restaurant['customer_email'];
+
                 $customer_password_decoded = password_verify($customer_password, $customer_password_db);
 
                 // echo $customer_password_db; 
                 // echo $customer_password_decoded;
                 if($customer_password_decoded){
                     // echo "Login successful";
-                    header("location:customer.php");
+                    // header("location:customer.php");
+                    header("location:food.php");
+
                 }
                 else{
                     // echo "Incorrect password";

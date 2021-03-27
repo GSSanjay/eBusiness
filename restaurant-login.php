@@ -17,7 +17,7 @@
         include("config/db-connect.php");
         $form_error = "";
 
-        if(isset($_POST)){
+        if(isset($_POST["submit"])){
             $restaurant_email = $_POST["restaurant_email"];
             $restaurant_password = $_POST["restaurant_password"];
 
@@ -29,6 +29,8 @@
                 $restaurant = mysqli_fetch_assoc($result);
                 $restaurant_password_db = $restaurant['restaurant_password'];
                 $_SESSION['restaurant_name'] = $restaurant['restaurant_name'];
+                $_SESSION['restaurant_email'] = $restaurant['restaurant_email'];
+
                 $restaurant_password_decoded = password_verify($restaurant_password, $restaurant_password_db);
 
                 // echo $restaurant_password_db; 

@@ -1,3 +1,15 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['customer_name'])){
+        echo "You are logged out";
+        header("location:customer-login.php");
+    }
+    else{
+        $logout_btn = "<div class='logout'><a href='customer-logout.php'>Logout</a></div>";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +35,10 @@
     <!-- Secondary Section -->
     <!-- <form action="order.php" method="POST"> -->
         <section class="second-section">
+            <div class="first-row">
+                <h4>Hey, <?php echo $_SESSION['customer_name']; ?></h4>
+                <?php echo $logout_btn ?>
+            </div>
             <h1 class="section-title secondary-heading">Order your favorite dish</h1>
             <div class="restaurants">
 
@@ -66,7 +82,7 @@
   
     <!-- Footer Section -->
     <?php include("footer.html")?>
-    <script src="js/inc-dec-item-count.js"></script>
+    <!-- <script src="js/inc-dec-item-count.js"></script> -->
     <script src="js/submit-order.js"></script>
 </body>
 </html>
