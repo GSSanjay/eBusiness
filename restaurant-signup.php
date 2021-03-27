@@ -63,9 +63,9 @@
                 <span><label for="restaurant_email">Email</label><span class="error"></span></span>
                 <input type="email" name="restaurant_email" id="restaurant_email" required/>
                 <span><label for="restaurant_password">Password</label><span class="error"></span></span>
-                <input type="password" name="restaurant_password" id="restaurant_password" required/>
+                <input type="password" name="restaurant_password" id="restaurant_password" minlength="8" required/>
                 <span><label for="restaurant_cpassword">Confirm Password</label><span class="error"></span></span>
-                <input type="password" name="restaurant_cpassword" id="restaurant_cpassword" required/>
+                <input type="password" name="restaurant_cpassword" id="restaurant_cpassword" minlength="8" required/>
                 <span><label for="restaurant_phone">Phone</label><span class="error"></span></span>
                 <input type="tel" name="restaurant_phone" id="restaurant_phone" pattern="[0-9]{10}" required/>
                 <span><label for="restaurant_details">Restaurant Details</label><span class="error"></span></span>

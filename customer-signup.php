@@ -64,9 +64,9 @@
                 <span><label for="customer_email">Email</label><span class="error"></span></span>
                 <input type="email" name="customer_email" id="customer_email" required/>
                 <span><label for="customer_password">Password</label><span class="error"></span></span>
-                <input type="password" name="customer_password" id="customer_password" required/>
+                <input type="password" name="customer_password" id="customer_password" minlength="8" required/>
                 <span><label for="customer_cpassword">Confirm Password</label><span class="error"></span></span>
-                <input type="password" name="customer_cpassword" id="customer_cpassword" required/>
+                <input type="password" name="customer_cpassword" id="customer_cpassword" minlength="8" required/>
                 <span><label for="customer_phone">Phone</label><span class="error"></span></span>
                 <input type="tel" name="customer_phone" id="customer_phone" pattern="[0-9]{10}" required/>
                 <span><label for="customer_preference">Preference</label><span class="error"></span></span>

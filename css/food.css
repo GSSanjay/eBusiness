@@ -158,10 +158,10 @@
 @media (min-width: 600px) {
   .restaurants {
     /* flex-direction: column; */
-    margin: 0rem 0rem;
+    margin: 0.5rem 0rem;
     align-items: center;
   }
   .restaurant {
-    width: 27%;
+    width: 20%;
   }
 }

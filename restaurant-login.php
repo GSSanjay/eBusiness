@@ -62,7 +62,7 @@
                 <span><label for="restaurant_password">Password</label><span class="error"></span></span>
                 <input type="password" name="restaurant_password" id="restaurant_password" required/>
                 <div>
-                    <button type="submit" name="submit">Login</button>
+                    <button type="submit" class="login-btn" name="submit">Login</button>
                     <h4>Don't have an account?</br> <a href="restaurant-signup.php">Sign up</a> </h4>
                 </div>
             </div>

@@ -65,7 +65,7 @@
                 <span><label for="customer_password">Password</label><span class="error"></span></span>
                 <input type="password" name="customer_password" id="customer_password" required/>
                 <div>
-                    <button type="submit" name="submit">Login</button>
+                    <button type="submit" class="login-btn" name="submit">Login</button>
                     <h4>Don't have an account?</br> <a href="customer-signup.php">Sign up</a> </h4>
                 </div>
             </div>
