@@ -1,0 +1,44 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer Style */
+footer {
+  background-color: rgb(235, 235, 235);
+  /* position: fixed; */
+  width: 100%;
+  /* left: 0; */
+  bottom: 0;
+}
+
+.footer {
+  display: flex;
+  text-align: center;
+  margin: 0rem 2rem;
+}
+
+.sub-section {
+  width: 25%;
+  padding: 1rem;
+}
+
+.sub-section h4 {
+  margin: 0;
+}
+
+.sub-section ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sub-section ul li {
+  list-style: none;
+  padding: 0.2rem 0rem;
+}
+
+.sub-section ul li a {
+  text-decoration: none;
+}

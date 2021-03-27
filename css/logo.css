@@ -1,0 +1,28 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Style */
+header {
+  position: sticky;
+  top: 0;
+}
+
+#logo {
+  color: rgb(211, 152, 43);
+  font-size: 2.5rem;
+  font-weight: bolder;
+  background: black;
+  padding: 0.5rem 0.5rem;
+}
+#logo:after {
+  content: "shala";
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}

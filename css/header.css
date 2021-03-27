@@ -1,0 +1,51 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Style */
+#logo {
+  color: rgb(211, 152, 43);
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+#logo:after {
+  content: "shala";
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+  /* opacity: 0.7; */
+}
+
+#nav-items {
+  display: flex;
+  margin-left: auto;
+}
+
+#nav-items li {
+  list-style: none;
+}
+
+#nav-items li a {
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+#nav-items li a:hover {
+  background: white;
+  border-radius: 20px;
+  color: black;
+}

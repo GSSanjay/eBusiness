@@ -1,0 +1,83 @@
+/* CSS Reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.signup-container {
+  background: url("../images/bg14.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  /* background-color: rgb(192, 159, 159); */
+  height: 100vh;
+}
+
+.signup-container h1 {
+  margin-bottom: 1rem;
+  color: white;
+  margin-right: 4rem;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 4rem;
+}
+
+.signup .error {
+  color: #ff6a00;
+  text-align: right;
+  margin-left: 2rem;
+}
+
+.signup label {
+  color: #fbff00;
+  font-weight: bolder;
+}
+
+.signup input {
+  height: 30px;
+  /* border-radius: 20px; */
+  outline: none;
+  border: none;
+  /* width: 80%; */
+  margin: 0.5rem 0rem;
+}
+
+.signup div {
+  text-align: center;
+}
+.signup button {
+  margin-top: 1rem;
+  height: 30px;
+  width: 60%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  background: rgb(211, 152, 43);
+  color: white;
+  cursor: pointer;
+}
+
+.signup button:hover {
+  background-color: rgb(223, 222, 222);
+  color: black;
+}
+
+.signup h4 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.signup a {
+  color: rgb(211, 152, 43);
+  /* text-decoration: none; */
+}
