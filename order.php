@@ -7,7 +7,7 @@
     }
     else{
         include("config/db-connect.php");
-
+        $success_msg = "";
         if(isset($_GET)){
             $item_name = $_GET["item_name"];
             $restaurant_name = $_GET["restaurant_name"];
@@ -15,8 +15,22 @@
             $item_price = (int)$_GET["item_price"];
 
             $total_price = $item_price * $qty;
+            $customer_id = $_SESSION['customer_id'];
+            // echo $customer_id;
 
-            $query = "INSERT INTO order( customer_id, item_name, quantity, total_price, restaurant_name) VALUES()";
+            $query_order_id = "SELECT * from order_details WHERE order_details";
+
+            $query_insert = "INSERT INTO order_details( customer_id, item_name, quantity, total_price, restaurant_name) VALUES('$customer_id', '$item_name', '$qty', '$total_price', '$restaurant_name')";
+
+            $query_insert_db = mysqli_query($conn, $query_insert);
+
+            if($query_insert_db){
+                $success_msg = "Hurray.. Your order has been placed";
+                header("location:customer.php?success_msg=Hurray.. Your order has been placed");
+            }
+            else{
+                echo "Order not placed";
+            }
         }
         
     }
@@ -50,6 +64,17 @@
             <div class="logout"><a href="customer-logout.php">Logout</a></div>
         </div>
         <div class="box">
+
+             <div class="box2">
+                <ul>
+                    <h1><?php echo $success_msg; ?></h1>
+                    <li><?php echo $restaurant_name; ?></li>
+                     <li><?php echo $qty ." ".$item_name. "(s)"; ?></li>
+
+                    <li><?php echo "Total amount to be paid: &#x20B9;".$total_price; ?></li>
+                    <!-- <li><a href="customer-logout.php">Logout</a></li> -->
+                </ul>
+            </div>
             <div class="box1">
                 <ul>
                     <li><a href="food.php">Food Menu</a></li>
@@ -57,17 +82,10 @@
                     <!-- <li><a href="customer-logout.php">Logout</a></li> -->
                 </ul>
             </div>
-             <div class="box2">
-                <ul>
-                    <li><?php echo $restaurant_name; ?></li>
-                    <li><?php echo $qty; ?></li>
-                    <li><?php echo $total_price; ?></li>
-                    <!-- <li><a href="customer-logout.php">Logout</a></li> -->
-                </ul>
-            </div>
         </div>
         <!-- <div class="logout"><a href="customer-logout.php">Logout</a></div> -->
     </section>
     <?php include("footer.html") ?>
+    
 </body>
 </html>

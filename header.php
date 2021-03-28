@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    // session_start();
 
     if(!isset($_SESSION['customer_name'])){
         // echo "You are logged out";
@@ -13,7 +13,7 @@
         // $logout_btn = "<div class='logout'><a href='customer-logout.php'>Logout</a></div>";
         // echo "<style>#nav-items{display:none};</style>";
         $header_menu = "<ul id='nav-items-login'>
-                <li>Hey, ". $_SESSION['customer_name'] ."</li>
+                <li>Hey, <a class='user-name' href='customer.php'>". $_SESSION['customer_name'] ."</a></li>
                 <li><a class='logout-btn' href='customer-logout.php'>Logout</a></li>
               </ul>";
     }
@@ -31,7 +31,7 @@
   <body>
     <header>
       <nav id="navbar">
-        <a href="index.php"><h1 id="logo">Food</h1></a>
+        <a href="index.php"><h1 id="logo">food</h1></a>
         <!-- <ul id="nav-items">
           <li><a href="customer-login.php">Login</a></li>
           <li><a href="customer-signup.php">Signup</a></li>

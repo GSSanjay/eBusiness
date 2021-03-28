@@ -1,5 +1,6 @@
 const submitOrder = (id) => {
   // console.log(id);
+  let successMsg = document.querySelector("#success-msg");
   let orderBtn = document.querySelector("#" + id);
   // console.log(orderBtn);
   let parentElem = orderBtn.parentElement.parentElement;
@@ -15,7 +16,8 @@ const submitOrder = (id) => {
     alert("Please choose up to 100 quantity.");
   } else {
     console.log(item_name, restaurant_name, qty);
-
+    // alert("Order placed");
     window.location.href = `order.php?item_name=${item_name}&item_price=${item_price}&restaurant_name=${restaurant_name}&qty=${qty}`;
+    successMsg.innerHTML = "Order placed";
   }
 };

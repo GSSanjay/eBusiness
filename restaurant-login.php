@@ -1,5 +1,12 @@
 <?php
     session_start();
+    if(!isset($_SESSION['restaurant_name'])){
+        // echo "You are logged out";
+        // header("location:restaurant-login.php");
+    }
+    else{
+        header("location:restaurant.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +37,7 @@
                 $restaurant_password_db = $restaurant['restaurant_password'];
                 $_SESSION['restaurant_name'] = $restaurant['restaurant_name'];
                 $_SESSION['restaurant_email'] = $restaurant['restaurant_email'];
+                $_SESSION['restaurant_id'] = $restaurant['restaurant_id'];
 
                 $restaurant_password_decoded = password_verify($restaurant_password, $restaurant_password_db);
 

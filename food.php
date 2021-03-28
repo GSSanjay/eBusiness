@@ -36,10 +36,11 @@
     <!-- <form action="order.php" method="POST"> -->
         <section class="second-section">
             <div class="first-row">
-                <h4>Hey, <?php echo $_SESSION['customer_name']; ?></h4>
+                <h4>Hey, <a href="customer.php" class="user-name"><?php echo $_SESSION['customer_name']; ?></a></h4>
+                <!-- <h6 id="success-msg"></h6> -->
                 <?php echo $logout_btn ?>
             </div>
-            <h1 class="section-title secondary-heading">Order your favorite dish</h1>
+            <h1 class="section-title secondary-heading">Click on Order button to taste your favorite dish</h1>
             <div class="restaurants">
 
             <!-- Query data from database  -->

@@ -16,6 +16,11 @@
   justify-content: space-between;
 }
 
+.second-section .first-row .user-name {
+  color: black;
+  text-decoration: underline;
+}
+
 .second-section h4 {
   margin: 2rem;
 }

@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['restaurant_name'])){
+        echo "You are logged out";
+        header("location:restaurant-login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,10 +66,6 @@
                 echo "Item added";
                 header("location:add-item.php?success_message=".$success_message);
 
-                // echo "<meta http-equiv='refresh' content='0'>";
-                // header('Location: '.$_SERVER['REQUEST_URI']);
-                // echo "<script type='text/javascript'>location.reload(true);</script>";
-                // echo "<script>window.location.href='add-item.php'</script>";
             }
             else{
                 $form_error = "Not inserted";
@@ -72,15 +76,19 @@
     <form action="" method="POST" enctype="multipart/form-data">
         <?php include("logo.html") ?>
         <div class="container">
-            <h1>Add a new Item</h1>
-            <div class="box">
+            <div class="box1">
+                <h2><a href="restaurant.php" class="user_name"><?php echo $_SESSION['restaurant_name']; ?></a></h2>
+            <!-- <div class="logout"><a href="restaurant-logout.php">Logout</a></div> -->
+            </div>
+
+            <h2>Add a new Item</h2>
+            <div class="box2">
                 <?php $success_message = $_GET["success_message"]; ?>
                 <span class="success"><?php echo $success_message; ?></span>
                 <span class="error"><?php echo $form_error; ?></span>
                 <span><label for="item_name">Item Name</label><span class="error"></span></span>
                 <input type="text" name="item_name" id="item_name" required/>
-                <!-- <span><label for="item_image">Item Image</label><span class="error"></span></span>
-                <input type="file" name="item_image" id="item_image" required/> -->
+
                 <span><label for="item_price">Item Price</label><span class="error"></span></span>
                 <input type="number" name="item_price" id="item_price" required/>
                 <div class="preference">
@@ -90,7 +98,6 @@
                 <form action="" method="POST" enctype="multipart/form-data">
                     <span><label for="item_image">Item Image</label><span class="error"></span></span>
                     <input type="file" name="image" />
-                    <!-- <input type="submit"/> -->
                 </form>
                 <div>
                     <button type="submit" name="submit">Add Item</button>
@@ -98,7 +105,6 @@
             </div>
         </div>
     </form>
-    <!-- <script>location.reload(true);</script> -->
     <?php include("footer.html") ?>
 </body>
 </html>

@@ -6,47 +6,83 @@
 }
 
 .container {
-  background: url("../images/bg14.jpg");
+  display: flex;
+  justify-content: center;
+  background: url("../images/custlogin-bg.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   /* background-color: rgb(192, 159, 159); */
   height: 100vh;
 }
 
-.container h1 {
+.container h2 {
+  margin-top: 0;
   margin-bottom: 1rem;
   color: white;
   margin-right: 4rem;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   font-weight: bolder;
 }
 
-.box {
+.box1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 2rem;
+}
+
+.box1 h2 {
+  color: white;
+}
+
+.box1 h2 a {
+  color: white;
+  text-decoration: underline;
+}
+
+.logout a {
+  /* margin: 2rem; */
+  color: black;
+  border: 1px solid black;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  line-height: 50px;
+  padding: 0.2rem 1rem;
+  background: white;
+}
+
+.logout a:hover {
+  background: #dba225;
+  color: white;
+}
+
+.box2 {
   display: flex;
   flex-direction: column;
   width: 20%;
   margin-right: 4rem;
 }
 
-.box .error {
+.box2 .error {
   color: #ff6a00;
   text-align: right;
   margin-left: 2rem;
 }
-.box .success {
+.box2 .success {
   color: #7ef740;
   text-align: right;
 }
 
-.box label {
+.box2 label {
   color: #fbff00;
   font-weight: bolder;
 }
 
-.box input {
+.box2 input {
   height: 30px;
   /* border-radius: 20px; */
   outline: none;
@@ -55,22 +91,22 @@
   margin: 0.5rem 0rem;
 }
 
-.box div {
+.box2 div {
   text-align: center;
 }
 
-.box .preference {
+.box2 .preference {
   text-align: left;
   display: flex;
   align-items: center;
   color: white;
 }
 
-.box .preference input[type="radio"] {
+.box2 .preference input[type="radio"] {
   margin: 0rem 1rem;
 }
 
-.box button {
+.box2 button {
   margin-top: 1rem;
   height: 30px;
   width: 60%;
@@ -83,17 +119,45 @@
   cursor: pointer;
 }
 
-.box button:hover {
+.box2 button:hover {
   background-color: rgb(223, 222, 222);
   color: black;
 }
 
-.box h4 {
+.box2 h4 {
   color: white;
   font-size: 1.2rem;
 }
 
-.box a {
+.box2 a {
   color: rgb(211, 152, 43);
   /* text-decoration: none; */
+}
+
+.user-name {
+  color: white;
+  text-decoration: underline;
+}
+
+/* CSS for Responsiveness */
+@media (max-width: 600px) {
+  .container {
+    align-items: center;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .box2 {
+    width: 50%;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+
+  .box2 h4 {
+    font-size: 1rem;
+  }
 }

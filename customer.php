@@ -19,17 +19,23 @@
 <body>
     <?php include("logo.html") ?>
     <section class="container">
-        <div class="box">
-            <h2>Hey <?php echo $_SESSION['customer_name']; ?></h2>
+        <!-- <div class="box"> -->
+            <!-- <h2>Hey <?php echo $_SESSION['customer_name']; ?></h2> -->
+            <div class="box2">
+                <h2>Hey, <?php echo $_SESSION['customer_name']; ?></h2>
+                <h4><?php //echo $_GET["success_msg"]; ?></h4>
+                <div class="logout"><a href="customer-logout.php">Logout</a></div>
+            </div>
+            <div class="msg"><h4><?php if(isset($_GET["success_msg"])){ echo $_GET["success_msg"];} ?></h4></div>
             <div class="box1">
                 <ul>
-                    <li><a href="">Food Menu</a></li>
+                    <li><a href="food.php">Food Menu</a></li>
                     <li><a href="">View Orders</a></li>
                     <!-- <li><a href="customer-logout.php">Logout</a></li> -->
                 </ul>
             </div>
-        </div>
-        <div class="logout"><a href="customer-logout.php">Logout</a></div>
+        <!-- </div> -->
+        <!-- <div class="logout"><a href="customer-logout.php">Logout</a></div> -->
     </section>
     <?php include("footer.html") ?>
 </body>

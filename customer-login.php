@@ -1,5 +1,12 @@
 <?php
     session_start();
+    if(!isset($_SESSION['customer_name'])){
+        // echo "You are logged out";
+        // header("location:customer-login.php");
+    }
+    else{
+        header("location:customer.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +46,7 @@
                 if($customer_password_decoded){
                     // echo "Login successful";
                     // header("location:customer.php");
-                    header("location:food.php");
+                    header("location:customer.php");
 
                 }
                 else{

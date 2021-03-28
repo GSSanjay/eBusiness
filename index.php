@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['customer_name'])){
+        // echo "You need to login to place your order. Redirecting to login page...";
+        // header("location:customer-login.php");
+        // header("Refresh: 5; url=customer-login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +40,19 @@
     <!-- Database connection -->
     <?php include("config/db-connect.php") ?>
 
+    <?php
+        if(isset($_POST["submit"])){
+             if(!isset($_SESSION['customer_name'])){
+                // echo "You need to login to place your order. Redirecting to login page...";
+                // header("location:customer-login.php");
+                header("Refresh: 5; url=customer-login.php");
+            }
+            else{
+                header("location:food.php");
+            }
+        }
+    ?>
+
     <!-- Secondary Section -->
     <!-- <form action="order.php" method="POST"> -->
     <section class="second-section">
@@ -39,7 +60,7 @@
                 <!-- <h4>Hey, <?php //echo $_SESSION['customer_name']; ?></h4> -->
                 <?php //echo $logout_btn ?>
             </div>
-            <h1 class="section-title secondary-heading">Order your favorite dish</h1>
+            <h1 class="section-title secondary-heading">Popular dishes</h1>
             <div class="restaurants">
 
             <!-- Query data from database  -->
@@ -54,20 +75,20 @@
                         echo '
                             <!--<form action="order.php" method="POST">-->
                                 <article class="restaurant">
-                                    <!--<form action="order.php" method="POST">-->
+                                    <form action="" method="POST">
                                         <img src="'. $row["item_image"] .'" alt="">
                                         <h1 id="item_name">'. $row["item_name"] .'</h1>
                                         <p id="item_price"> &#x20B9;'.$row["item_price"].'</p>
                                         <p id="restaurant_name">'. $row["restaurant_name"] .'</p>
                                         <div class="quantity">
                                             <!--<button id="minus'.$row["item_id"].'" onclick="minus(this.id)">-</button>-->
-                                            <input type="number" name="qty" id="qty" min="1" max="100" value="1" required/>
+                                            <!--<input type="number" name="qty" id="qty" min="1" max="100" value="1" required/>-->
                                             <!--<button id="plus'.$row["item_id"].'" onclick="plus(this.id)">+</button>-->
                                         </div>
                                         <!--<div><button type="submit" id="btn-order'.$row["item_id"].'" class="btn-order" onclick="submitOrder(this.id)">Order</button></div>-->
-                                        <div><button id="btn-order'.$row["item_id"].'" class="btn-order" onclick="redirect_to_login();">Order</button></div>
+                                        <div><button name="submit" type="submit" id="btn-order'.$row["item_id"].'" class="btn-order" onclick="">Order</button></div>
 
-                                    <!--</form>-->
+                                    </form>
                                 </article>
                             <!--</form>-->
                         ';
@@ -86,6 +107,9 @@
     <script>
         const redirect_to_login = () => {
             window.location.href="customer-login.php";
+        }
+        const redirect_to_food = () => {
+            window.location.href="food.php";
         }
     </script>
 </body>
