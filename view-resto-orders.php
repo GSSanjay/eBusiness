@@ -33,9 +33,21 @@
              <!-- Query data from database  -->
         <?php
             $restaurant_name = $_SESSION['restaurant_name'];
-            $query_food = "SELECT order_id, customer_id, item_name, quantity, total_price, restaurant_name FROM order_details WHERE restaurant_name = '$restaurant_name'";
+            $query_food = "SELECT o.order_id, c.customer_id, c.customer_name, c.customer_address, o.item_name, o.quantity, o.total_price, o.restaurant_name, o.order_date_time FROM order_details o, customer c WHERE  o.restaurant_name = '$restaurant_name' AND c.customer_id = o.customer_id";
             $result_food = mysqli_query($conn, $query_food);
             $result_food_count = mysqli_num_rows($result_food);
+
+            echo '
+            <table class="table">
+                <tr class="table-h">
+                <td>Customer Name</td>
+                <td>Customer Address</td>
+                <td>Item</td>
+                <td>Quantity</td>
+                <td>Total Amount</td>
+                <td>Ordered On</td>
+                </tr>
+            </table>';
             
             if($result_food_count > 0){
                 while($row = mysqli_fetch_assoc($result_food)){
@@ -45,9 +57,12 @@
 
                         <table>
                             <tr>
+                                <td>'.$row["customer_name"].'</td>
+                                <td>'.$row["customer_address"].'</td>
                                 <td>'.$row["item_name"].'</td>
                                 <td>'.$row["quantity"].'</td>
                                 <td>&#x20B9;'.$row["total_price"].'</td>
+                                <td>&#x20B9;'.$row["order_date_time"].'</td>
                             </tr>
                         </table>
                     </div>';

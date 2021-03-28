@@ -37,6 +37,12 @@
   color: white;
 }
 
+.table-h td {
+  background: rgb(210 126 54);
+  font-weight: bolder;
+  color: white;
+}
+
 .table {
   display: flex;
   align-items: center;

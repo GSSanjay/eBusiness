@@ -18,9 +18,10 @@
             $customer_id = $_SESSION['customer_id'];
             // echo $customer_id;
 
-            $query_order_id = "SELECT * from order_details WHERE order_details";
+            // $query_order_id = "SELECT * from order_details WHERE order_details";
+            // $date_time = date('Y-m-d H:i:s');
 
-            $query_insert = "INSERT INTO order_details( customer_id, item_name, quantity, total_price, restaurant_name) VALUES('$customer_id', '$item_name', '$qty', '$total_price', '$restaurant_name')";
+            $query_insert = "INSERT INTO order_details( customer_id, item_name, quantity, total_price, restaurant_name, order_date_time) VALUES('$customer_id', '$item_name', '$qty', '$total_price', '$restaurant_name', CURRENT_TIMESTAMP)";
 
             $query_insert_db = mysqli_query($conn, $query_insert);
 
