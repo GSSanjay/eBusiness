@@ -43,7 +43,7 @@
                         echo "<script>window.location.href='customer-login.php'</script>";
                     }
                     else{
-                        echo "Not inserted";
+                        // echo "Not inserted";
                     }
                 }
                 else{

@@ -42,7 +42,7 @@
                         echo "<script>window.location.href='restaurant-login.php'</script>";
                     }
                     else{
-                        echo "Not inserted";
+                        // echo "Not inserted";
                     }
                 }
                 else{
