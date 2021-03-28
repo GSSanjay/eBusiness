@@ -17,7 +17,7 @@
     <!-- Main Section -->
     <main class="background">
         <!-- Header Section -->
-        <?php include("header.html") ?>
+        <?php include("header.php") ?>
 
         <section id="main-section">
             <div class="box">

@@ -27,10 +27,16 @@
 .second-section .logout a {
   color: black;
   margin: 2rem;
-  color: #dba225;
+  /* color: #dba225; */
   border: 1px solid black;
   text-align: center;
-  padding: 0.3rem 1rem;
+  padding: 0.2rem 1rem;
+}
+
+.second-section .logout a:hover {
+  background: #dba225;
+  color: white;
+  border: none;
 }
 
 .second-section .section-title {
@@ -121,6 +127,11 @@
   font-size: 1rem;
   outline: none;
   /* border: none; */
+}
+
+.price {
+  display: flex;
+  justify-content: center;
 }
 
 .restaurant div .btn-order {

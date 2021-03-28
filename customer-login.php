@@ -27,11 +27,11 @@
             $result_count = mysqli_num_rows($result);
 
             if($result_count){
-                $restaurant = mysqli_fetch_assoc($result);
-                $customer_password_db = $restaurant['customer_password'];
-                $_SESSION['customer_name'] = $restaurant['customer_name'];
-                $_SESSION['customer_email'] = $restaurant['customer_email'];
-
+                $customer = mysqli_fetch_assoc($result);
+                $customer_password_db = $customer['customer_password'];
+                $_SESSION['customer_name'] = $customer['customer_name'];
+                $_SESSION['customer_email'] = $customer['customer_email'];
+                $_SESSION['customer_id'] = $customer['customer_id'];
                 $customer_password_decoded = password_verify($customer_password, $customer_password_db);
 
                 // echo $customer_password_db; 

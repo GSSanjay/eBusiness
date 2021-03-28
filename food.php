@@ -57,7 +57,7 @@
                                     <!--<form action="order.php" method="POST">-->
                                         <img src="'. $row["item_image"] .'" alt="">
                                         <h1 id="item_name">'. $row["item_name"] .'</h1>
-                                        <p id="item_price"> &#x20B9;'.$row["item_price"].'</p>
+                                        <div class="price"><p> &#x20B9;<p id="item_price">'.$row["item_price"].'</p></p></div>
                                         <p id="restaurant_name">'. $row["restaurant_name"] .'</p>
                                         <div class="quantity">
                                             <!--<button id="minus'.$row["item_id"].'" onclick="minus(this.id)">-</button>-->

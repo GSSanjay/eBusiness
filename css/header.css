@@ -30,6 +30,7 @@ a {
 #nav-items {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 
 #nav-items li {
@@ -50,13 +51,42 @@ a {
   color: black;
 }
 
+#nav-items-login {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+#nav-items-login li {
+  color: white;
+  list-style: none;
+}
+
+.logout-btn {
+  margin: 2rem;
+  color: black;
+  border: 1px solid black;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  line-height: 50px;
+  background: white;
+  padding: 0.2rem 1rem;
+}
+
+.logout-btn:hover {
+  background: #dba225;
+  color: white;
+  border: none;
+}
+
 /* CSS for Responsiveness */
 @media (max-width: 600px) {
   #logo {
     font-size: 1.5rem;
   }
   #navbar {
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
   #nav-items li a {
     padding: 0.2rem 1rem;
@@ -70,6 +100,12 @@ a {
   }
   .primary-heading {
     font-size: 2rem;
+  }
+
+  element.style {
+  }
+  .logout-btn {
+    margin: 0.5rem;
   }
 }
 
