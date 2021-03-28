@@ -12,13 +12,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/restaurant.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/utils.css" />
     <title>Customer Home</title>
 </head>
 <body>
     <?php include("logo.html") ?>
-    <section class="container">
+    <section class="container-c">
         <!-- <div class="box"> -->
             <!-- <h2>Hey <?php echo $_SESSION['customer_name']; ?></h2> -->
             <div class="box2">
@@ -30,7 +30,7 @@
             <div class="box1">
                 <ul>
                     <li><a href="food.php">Food Menu</a></li>
-                    <li><a href="">View Orders</a></li>
+                    <li><a href="view-cust-orders.php">View Orders</a></li>
                     <!-- <li><a href="customer-logout.php">Logout</a></li> -->
                 </ul>
             </div>

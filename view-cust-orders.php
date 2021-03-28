@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-    if(!isset($_SESSION['restaurant_name'])){
+    if(!isset($_SESSION['customer_name'])){
         echo "You are logged out";
-        header("location:restaurant-login.php");
+        header("location:customer-login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/view-orders.css" />
     <link rel="stylesheet" href="css/utils.css" />
-    <title>Restaurant Home</title>
+    <title> Home</title>
 </head>
 <body>
     <?php include("logo.html") ?>
@@ -26,14 +26,15 @@
     <section class="container">
         
         <div class="box2">
-            <h2>Restaurant Orders</h2>
-            <h2><a href = "restaurant.php" class="user-name"><?php echo $_SESSION['restaurant_name']; ?></a></h2>
-            <div class="logout"><a href="restaurant-logout.php">Logout</a></div>
+            <!-- <h2>Hey, <?php echo $_SESSION['customer_name']; ?></h2> -->
+            <h2>Hey, <a href = "customer.php" class="user-name"><?php echo $_SESSION['customer_name']; ?></a></h2>
+            <h2>Orders</h2>
+            <div class="logout"><a href="customer-logout.php">Logout</a></div>
         </div>
              <!-- Query data from database  -->
         <?php
-            $restaurant_name = $_SESSION['restaurant_name'];
-            $query_food = "SELECT order_id, customer_id, item_name, quantity, total_price, restaurant_name FROM order_details WHERE restaurant_name = '$restaurant_name'";
+            $customer_id = $_SESSION['customer_id'];
+            $query_food = "SELECT order_id, customer_id, item_name, quantity, total_price, restaurant_name FROM order_details WHERE customer_id = '$customer_id'";
             $result_food = mysqli_query($conn, $query_food);
             $result_food_count = mysqli_num_rows($result_food);
             
@@ -46,12 +47,13 @@
                         <table>
                             <tr>
                                 <td>'.$row["item_name"].'</td>
+                                <td>'.$row["restaurant_name"].'</td>
                                 <td>'.$row["quantity"].'</td>
-                                <td>'.$row["total_price"].'</td>
+                                <td>&#x20B9;'.$row["total_price"].'</td>
                             </tr>
                         </table>
                     </div>';
-                    // echo $row["restaurant_name"]; 
+                    // echo $row["customer_name"]; 
                 }
             }
         ?>
