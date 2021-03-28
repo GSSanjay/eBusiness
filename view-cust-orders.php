@@ -56,6 +56,9 @@
                     // echo $row["customer_name"]; 
                 }
             }
+            else{
+                echo "<h2>No orders found</h2>";
+            }
         ?>
            
     </section>

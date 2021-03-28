@@ -56,7 +56,7 @@
             // $item_image = mysqli_real_escape_string($conn, $_POST["item_image"]);
             $item_price = mysqli_real_escape_string($conn, $_POST["item_price"]);
             $item_type = mysqli_real_escape_string($conn, $_POST["item_type"]);
-            $restaurant_id = 1;            
+            $restaurant_id = $_SESSION['restaurant_id'];            
 
             $query_insert = "INSERT INTO food_item(item_name, item_image, restaurant_id, item_price, item_type) VALUES('$item_name', '$item_image', '$restaurant_id', '$item_price', '$item_type')";
             $query_insert_db = mysqli_query($conn, $query_insert);

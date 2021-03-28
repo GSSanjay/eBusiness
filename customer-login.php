@@ -39,6 +39,8 @@
                 $_SESSION['customer_name'] = $customer['customer_name'];
                 $_SESSION['customer_email'] = $customer['customer_email'];
                 $_SESSION['customer_id'] = $customer['customer_id'];
+                $_SESSION['preference'] = $customer['preference'];
+                // echo $_SESSION['preference'];
                 $customer_password_decoded = password_verify($customer_password, $customer_password_db);
 
                 // echo $customer_password_db; 

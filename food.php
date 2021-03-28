@@ -37,6 +37,12 @@
         <section class="second-section">
             <div class="first-row">
                 <h4>Hey, <a href="customer.php" class="user-name"><?php echo $_SESSION['customer_name']; ?></a></h4>
+                <h5>
+                    <?php if($_SESSION['preference'] == "Veg") {
+                        echo "Showing Veg Items";
+                    } 
+                    ?>
+                </h5>
                 <!-- <h6 id="success-msg"></h6> -->
                 <?php echo $logout_btn ?>
             </div>
@@ -44,8 +50,34 @@
             <div class="restaurants">
 
             <!-- Query data from database  -->
+            
             <?php
-                $query_food = "SELECT item_id, item_name, item_image, item_price, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
+                $query_food = "";
+                // $customer_preference = $_SESSION['preference'];
+
+                if(!isset($_SESSION['customer_name'])){
+                    $query_food = "SELECT item_id, item_name, item_image, item_price, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
+                    // echo "if";
+                }
+                else {
+                    $customer_preference = $_SESSION['preference'];
+                    // echo $customer_preference;
+
+
+                    // echo "else";
+                    if($customer_preference == "Veg"){
+                        // echo "if";
+
+                        $query_food = "SELECT  distinct f.item_id, f.item_name, f.item_image, f.item_price, r.restaurant_name FROM food_item f, restaurant r, customer c WHERE f.restaurant_id = r.restaurant_id AND f.item_type = '$customer_preference'";
+                    }
+                    else{
+                        // echo "else";
+
+                        $query_food = "SELECT item_id, item_name, item_image, item_price, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
+                    }
+                }
+
+                // $query_food = "SELECT item_id, item_name, item_image, item_price, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
                 $result_food = mysqli_query($conn, $query_food);
                 $result_food_count = mysqli_num_rows($result_food);
                 

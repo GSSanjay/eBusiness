@@ -26,8 +26,8 @@
     <section class="container">
         
         <div class="box2">
-            <h2>Restaurant Orders</h2>
             <h2><a href = "restaurant.php" class="user-name"><?php echo $_SESSION['restaurant_name']; ?></a></h2>
+            <h2>Restaurant Orders</h2>
             <div class="logout"><a href="restaurant-logout.php">Logout</a></div>
         </div>
              <!-- Query data from database  -->
@@ -47,12 +47,15 @@
                             <tr>
                                 <td>'.$row["item_name"].'</td>
                                 <td>'.$row["quantity"].'</td>
-                                <td>'.$row["total_price"].'</td>
+                                <td>&#x20B9;'.$row["total_price"].'</td>
                             </tr>
                         </table>
                     </div>';
                     // echo $row["restaurant_name"]; 
                 }
+            }
+            else{
+                echo "<h2>No orders found</h2>";
             }
         ?>
            

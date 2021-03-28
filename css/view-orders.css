@@ -58,6 +58,11 @@
   text-decoration: underline;
 }
 
+h2 {
+  text-align: center;
+  color: white;
+}
+
 /* CSS for Responsiveness */
 @media (max-width: 600px) {
   .box2 h2 {
