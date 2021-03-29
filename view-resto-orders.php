@@ -34,7 +34,7 @@
              <!-- Query data from database  -->
         <?php
             $restaurant_name = $_SESSION['restaurant_name'];
-            $query_food = "SELECT o.order_id, c.customer_id, c.customer_name, c.customer_address, o.item_name, o.quantity, o.total_price, o.restaurant_name, o.order_date_time FROM order_details o, customer c WHERE  o.restaurant_name = '$restaurant_name' AND c.customer_id = o.customer_id";
+            $query_food = "SELECT o.order_id, c.customer_id, c.customer_name, c.customer_address, o.item_name, o.quantity, o.total_price, o.restaurant_name, o.order_date_time FROM order_details o, customer c WHERE  o.restaurant_name = '$restaurant_name' AND c.customer_id = o.customer_id ORDER BY order_date_time DESC";
             $result_food = mysqli_query($conn, $query_food);
             $result_food_count = mysqli_num_rows($result_food);
 
