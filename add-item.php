@@ -98,7 +98,7 @@
                 </div> 
                 <form action="" method="POST" enctype="multipart/form-data">
                     <span><label for="item_image">Item Image</label><span class="error"></span></span>
-                    <input type="file" name="image" />
+                    <input class="file-type" type="file" name="image" />
                 </form>
                 <div>
                     <button type="submit" name="submit">Add Item</button>

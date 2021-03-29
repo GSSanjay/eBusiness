@@ -139,6 +139,10 @@
   text-decoration: underline;
 }
 
+.file-type {
+  color: white;
+}
+
 /* CSS for Responsiveness */
 @media (max-width: 600px) {
   .container {
