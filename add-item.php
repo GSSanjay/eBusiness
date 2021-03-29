@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>foodshala - Restaurant | Add Item</title>
+    <title>Foodshala - Restaurant | Add Menu Item</title>
     <?php include("utils.html"); ?>
     <link rel="stylesheet" href="css/add-item.css"/>
     <link rel="stylesheet" href="css/utils.css" />
@@ -82,7 +82,7 @@
             <!-- <div class="logout"><a href="restaurant-logout.php">Logout</a></div> -->
             </div>
 
-            <h2>Add a new Item</h2>
+            <h2>Add menu item</h2>
             <div class="box2">
                 <?php $success_message = $_GET["success_message"]; ?>
                 <span class="success"><?php echo $success_message; ?></span>
