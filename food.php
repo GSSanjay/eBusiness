@@ -47,7 +47,7 @@
                 <!-- <h6 id="success-msg"></h6> -->
                 <?php echo $logout_btn ?>
             </div>
-            <h1 class="section-title secondary-heading">Click on Order button to taste your favorite dish</h1>
+            <h1 class="section-title secondary-heading">Click on order button to place your order</h1>
             <div class="restaurants">
 
             <!-- Query data from database  -->

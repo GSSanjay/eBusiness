@@ -31,8 +31,7 @@
         <section id="main-section">
             <div class="box">
                 <h1 class="primary-heading">Ready to taste your favorite food..?</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, quisquam.</p>
-                <p>Lorem ipsum dolor Lorem ipsum dolor sit amet.</p>
+                <p>Hungry? Then why don’t you treat yourself to one of our delicious collection of dishes</p>
                 <a href="food.php"><button class="btn">Order Now</button></a>
             </div>
         </section>
@@ -46,7 +45,8 @@
              if(!isset($_SESSION['customer_name'])){
                 // echo "You need to login to place your order. Redirecting to login page...";
                 // header("location:customer-login.php");
-                header("Refresh: 5; url=customer-login.php");
+                // header("Refresh: 5; url=customer-login.php");
+                header("Refresh: 0; url=customer-login.php");
             }
             else{
                 header("location:food.php");
@@ -61,7 +61,7 @@
                 <!-- <h4>Hey, <?php //echo $_SESSION['customer_name']; ?></h4> -->
                 <?php //echo $logout_btn ?>
             </div>
-            <h1 class="section-title secondary-heading">Popular dishes</h1>
+            <h1 class="section-title">Showing our menu</h1>
             <div class="restaurants">
 
             <!-- Query data from database  -->

@@ -3,7 +3,8 @@
     if(!isset($_SESSION['customer_name'])){
         echo "You need to login to place your order. Redirecting to login page...";
         // header("location:customer-login.php");
-        header("Refresh: 5; url=customer-login.php");
+        // header("Refresh: 5; url=customer-login.php");
+        header("Refresh: 0; url=customer-login.php");
     }
     else{
         include("config/db-connect.php");
