@@ -28,7 +28,7 @@
         </div>
         <div class="box1">
             <ul>
-                <li><a href="add-item.php">Add Items</a></li>
+                <li><a href="add-item.php">Add Menu Item</a></li>
                 <li><a href="view-resto-items.php">View Items</a></li>
                 <li><a href="view-resto-orders.php">View Orders</a></li>
             </ul>

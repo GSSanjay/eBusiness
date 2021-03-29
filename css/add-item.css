@@ -8,7 +8,7 @@
 .container {
   display: flex;
   justify-content: center;
-  background: url("../images/custlogin-bg.jpg");
+  background: url("../images/resto-home.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;

@@ -24,7 +24,7 @@
     <?php include("config/db-connect.php") ?>
 
 
-    <section class="container">
+    <section class="container-c">
         
         <div class="box2">
             <!-- <h2>Hey, <?php echo $_SESSION['customer_name']; ?></h2> -->

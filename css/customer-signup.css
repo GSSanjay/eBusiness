@@ -6,7 +6,7 @@
 }
 
 .container {
-  background: url("../images/resto-login.jpg");
+  background: url("../images/cust.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
