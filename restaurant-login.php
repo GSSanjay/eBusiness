@@ -14,9 +14,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodshala - Restaurant Login</title>
+    <?php include("utils.html"); ?>
     <link rel="stylesheet" href="css/restaurant-signup.css"/>
     <link rel="stylesheet" href="css/utils.css" />
-    <title>Restaurant Login</title>
 </head>
 <body>
     <?php
