@@ -66,7 +66,7 @@
 
             <!-- Query data from database  -->
             <?php
-                $query_food = "SELECT item_id, item_name, item_image, item_price, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
+                $query_food = "SELECT item_id, item_name, item_image, item_price, item_type, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
                 $result_food = mysqli_query($conn, $query_food);
                 $result_food_count = mysqli_num_rows($result_food);
                 
@@ -78,7 +78,9 @@
                                 <article class="restaurant">
                                     <form action="" method="POST">
                                         <img src="'. $row["item_image"] .'" alt="">
-                                        <h1 id="item_name">'. $row["item_name"] .'</h1>
+                                        <h1 id="item_name">'. $row["item_name"] .'
+                                        <span class="subtext">('.$row["item_type"].')</span>
+                                        </h1>
                                         <p id="item_price"> &#x20B9;'.$row["item_price"].'</p>
                                         <p id="restaurant_name">'. $row["restaurant_name"] .'</p>
                                         <div class="quantity">

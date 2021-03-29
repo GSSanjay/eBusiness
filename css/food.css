@@ -159,6 +159,10 @@
   color: white;
 }
 
+.subtext {
+  font-size: 0.7rem;
+}
+
 /* CSS for Responsiveness */
 @media (max-width: 600px) {
   .restaurants {

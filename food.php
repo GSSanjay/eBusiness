@@ -57,7 +57,7 @@
                 // $customer_preference = $_SESSION['preference'];
 
                 if(!isset($_SESSION['customer_name'])){
-                    $query_food = "SELECT item_id, item_name, item_image, item_price, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
+                    $query_food = "SELECT item_id, item_name, item_image, item_price, item_type, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
                     // echo "if";
                 }
                 else {
@@ -69,12 +69,12 @@
                     if($customer_preference == "Veg"){
                         // echo "if";
 
-                        $query_food = "SELECT  distinct f.item_id, f.item_name, f.item_image, f.item_price, r.restaurant_name FROM food_item f, restaurant r, customer c WHERE f.restaurant_id = r.restaurant_id AND f.item_type = '$customer_preference'";
+                        $query_food = "SELECT  distinct f.item_id, f.item_name, f.item_image, f.item_price, f.item_type, r.restaurant_name FROM food_item f, restaurant r, customer c WHERE f.restaurant_id = r.restaurant_id AND f.item_type = '$customer_preference'";
                     }
                     else{
                         // echo "else";
 
-                        $query_food = "SELECT item_id, item_name, item_image, item_price, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
+                        $query_food = "SELECT item_id, item_name, item_image, item_price, item_type, restaurant_name FROM food_item, restaurant WHERE food_item.restaurant_id = restaurant.restaurant_id";
                     }
                 }
 
@@ -90,7 +90,9 @@
                                 <article class="restaurant">
                                     <!--<form action="order.php" method="POST">-->
                                         <img src="'. $row["item_image"] .'" alt="">
-                                        <h1 id="item_name">'. $row["item_name"] .'</h1>
+                                        <h1 id="item_name">'. $row["item_name"] .'
+                                        <span class="subtext">('.$row["item_type"].')</span>
+                                        </h1>
                                         <div class="price"><p> &#x20B9;<p id="item_price">'.$row["item_price"].'</p></p></div>
                                         <p id="restaurant_name">'. $row["restaurant_name"] .'</p>
                                         <div class="quantity">
