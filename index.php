@@ -61,7 +61,7 @@
                 <!-- <h4>Hey, <?php //echo $_SESSION['customer_name']; ?></h4> -->
                 <?php //echo $logout_btn ?>
             </div>
-            <h1 class="section-title">Showing our menu</h1>
+            <h1 class="section-title">Showing our complete menu</h1>
             <div class="restaurants">
 
             <!-- Query data from database  -->

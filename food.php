@@ -90,9 +90,10 @@
                                 <article class="restaurant">
                                     <!--<form action="order.php" method="POST">-->
                                         <img src="'. $row["item_image"] .'" alt="">
-                                        <h1 id="item_name">'. $row["item_name"] .'
-                                        <span class="subtext">('.$row["item_type"].')</span>
-                                        </h1>
+                                        <div class="name-type">
+                                            <h1 id="item_name">'. $row["item_name"] .'</h1>
+                                            <span class="subtext">('.$row["item_type"].')</span>
+                                        </div>
                                         <div class="price"><p> &#x20B9;<p id="item_price">'.$row["item_price"].'</p></p></div>
                                         <p id="restaurant_name">'. $row["restaurant_name"] .'</p>
                                         <div class="quantity">
