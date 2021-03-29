@@ -51,7 +51,10 @@
             
             if($result_food_count > 0){
                 while($row = mysqli_fetch_assoc($result_food)){
-
+                    $order_date_time = $row["order_date_time"];
+                    $hr12time = date("g:iA", strtotime($order_date_time));
+                    $order_date = date('d M Y', strtotime($order_date_time));
+                    // echo $hr12time." ".$order_date;
                     echo '
                     <div class="table">
 
@@ -61,7 +64,8 @@
                                 <td>'.$row["restaurant_name"].'</td>
                                 <td>'.$row["quantity"].'</td>
                                 <td>&#x20B9;'.$row["total_price"].'</td>
-                                <td>'.$row["order_date_time"].'</td>
+                                <!--<td>'.$row["order_date_time"].'</td>-->
+                                <td>'.$order_date." ".$hr12time.'</td>
                             </tr>
                         </table>
                     </div>';
