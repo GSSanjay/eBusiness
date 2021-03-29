@@ -34,7 +34,8 @@
              <!-- Query data from database  -->
         <?php
             $restaurant_name = $_SESSION['restaurant_name'];
-            $query_food = "SELECT f.item_id, f.item_name, f.item_image, f.restaurant_id, f.item_price, f.item_type FROM food_item f, restaurant r WHERE f.restaurant_id = r.restaurant_id";
+            $restaurant_id = $_SESSION['restaurant_id'];
+            $query_food = "SELECT f.item_id, f.item_name, f.item_image, f.restaurant_id, f.item_price, f.item_type FROM food_item f, restaurant r WHERE f.restaurant_id = r.restaurant_id AND f.restaurant_id = '$restaurant_id'";
             $result_food = mysqli_query($conn, $query_food);
             $result_food_count = mysqli_num_rows($result_food);
 
