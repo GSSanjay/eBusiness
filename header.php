@@ -11,8 +11,8 @@
             $header_menu = '<ul class="main-menu">
                           <button class="main-menu-btn">Login/Signup</button>
                           <div class="submenu">
-                            <a href="customer.php">As a Foodie</a>
-                            <a href="restaurant.php">As a Restaurant</a>
+                            <a href="customer-login.php">As a Foodie</a>
+                            <a href="restaurant-login.php">As a Restaurant</a>
                           </div>
                           </ul>';
     }
