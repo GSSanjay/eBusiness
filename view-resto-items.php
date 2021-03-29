@@ -66,7 +66,7 @@
                 }
             }
             else{
-                echo "<h2>No orders found</h2>";
+                echo "<h2>No items found</h2>";
             }
         ?>
            
