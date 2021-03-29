@@ -31,7 +31,7 @@
             $result_email_count = mysqli_num_rows($result_email);
 
             if($result_email_count > 0){
-                $form_error = "The email already registered";
+                $form_error = "The email is already registered";
             }
             else{
                 if($restaurant_password == $restaurant_cpassword){
@@ -44,6 +44,7 @@
                     }
                     else{
                         // echo "Not inserted";
+                        echo "Registration could not be completed";
                     }
                 }
                 else{

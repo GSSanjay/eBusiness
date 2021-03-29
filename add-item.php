@@ -69,7 +69,7 @@
 
             }
             else{
-                $form_error = "Not inserted";
+                $form_error = "Item couldn't be added";
             }
         }
     ?>
