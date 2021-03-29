@@ -85,6 +85,53 @@ a {
   border: none;
 }
 
+.main-menu-btn {
+  background-color: white;
+  color: black;
+  padding: 0.2rem 1rem;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.main-menu {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  left: auto;
+}
+
+.submenu a {
+  color: black;
+  padding: 0.2rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu a:hover {
+  background-color: #dba225;
+  color: white;
+}
+
+.main-menu:hover .submenu {
+  display: block;
+}
+
+.main-menu:hover .main-menu-btn {
+  background-color: white;
+}
+
 /* CSS for Responsiveness */
 @media (max-width: 600px) {
   #logo {

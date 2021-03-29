@@ -2,12 +2,19 @@
     // session_start();
 
     if(!isset($_SESSION['customer_name'])){
-        // echo "You are logged out";
-        // header("location:customer-login.php");
-        $header_menu = "<ul id='nav-items'>
+        //  echo "You are logged out";
+        //  header("location:customer-login.php");
+        /*  $header_menu = "<ul id='nav-items'>
                 <li><a href='customer-login.php'>Login</a></li>
                 <li><a href='customer-signup.php'>Signup</a></li>
-              </ul>";
+              </ul>"; */
+            $header_menu = '<ul class="main-menu">
+                          <button class="main-menu-btn">Login/Signup</button>
+                          <div class="submenu">
+                            <a href="customer.php">As a Foodie</a>
+                            <a href="restaurant.php">As a Restaurant</a>
+                          </div>
+                          </ul>';
     }
     else{
         // $logout_btn = "<div class='logout'><a href='customer-logout.php'>Logout</a></div>";
