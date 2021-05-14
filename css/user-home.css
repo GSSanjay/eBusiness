@@ -5,14 +5,7 @@
 }
 
 .container {
-  background: url(../images/resto-home.jpg);
-  background-size: cover;
-
-  min-height: 100%;
-}
-
-.container-c {
-  background: url(../images/cust-home.jpg);
+  background: url(../images/user_home.jpg);
   background-size: cover;
 
   min-height: 100%;

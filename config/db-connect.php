@@ -4,7 +4,7 @@
     $HOST = "localhost";
     $USER = "root";
     $PASSWORD = "";
-    $DATABASE = "foodshala";
+    $DATABASE = "ebusiness";
 
     //Create a connection
     $conn = mysqli_connect($HOST, $USER, $PASSWORD, $DATABASE);

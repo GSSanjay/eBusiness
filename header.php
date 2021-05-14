@@ -2,23 +2,17 @@
     // session_start();
 
     if(!isset($_SESSION['customer_name'])){
-        //  echo "You are logged out";
-        //  header("location:customer-login.php");
-        /*  $header_menu = "<ul id='nav-items'>
-                <li><a href='customer-login.php'>Login</a></li>
-                <li><a href='customer-signup.php'>Signup</a></li>
-              </ul>"; */
+   
             $header_menu = '<ul class="main-menu">
                           <button class="main-menu-btn">Login/Signup</button>
                           <div class="submenu">
-                            <a href="customer-login.php">As a Foodie</a>
-                            <a href="restaurant-login.php">As a Restaurant</a>
+                            <a href="user-login.php">Login</a>
+                            <a href="user-signup.php">Signup</a>
                           </div>
                           </ul>';
     }
     else{
-        // $logout_btn = "<div class='logout'><a href='customer-logout.php'>Logout</a></div>";
-        // echo "<style>#nav-items{display:none};</style>";
+        
         $header_menu = "<ul id='nav-items-login'>
                 <li>Hey, <a class='user-name' href='customer.php'>". $_SESSION['customer_name'] ."</a></li>
                 <li><a class='logout-btn' href='customer-logout.php'>Logout</a></li>
@@ -31,7 +25,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foodshala</title>
+    <title>eBusiness</title>
     <?php include("utils.html"); ?>
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/utils.css" />
@@ -39,11 +33,8 @@
   <body>
     <header>
       <nav id="navbar">
-        <a href="index.php"><h1 id="logo">food</h1></a>
-        <!-- <ul id="nav-items">
-          <li><a href="customer-login.php">Login</a></li>
-          <li><a href="customer-signup.php">Signup</a></li>
-        </ul> -->
+        <a href="index.php"><h1 id="logo">e</h1></a>
+  
         <?php echo $header_menu; ?>
       </nav>
     </header>

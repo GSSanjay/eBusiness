@@ -7,7 +7,7 @@
 
 /* Background */
 .background {
-  background: url("../images/fs-home.jpg");
+  background: url("../images/home.jpg");
   background-size: cover;
 }
 
@@ -31,6 +31,7 @@
 
 .box p {
   font-size: 1.3rem;
+  /* color: #dba225; */
 }
 
 .box button {
@@ -49,10 +50,6 @@
   color: black;
 }
 
-/* Foods Section */
-.second-section {
-  /* margin-bottom: 8rem; */
-}
 .second-section .section-title {
   text-align: center;
   margin: 1rem 0rem;
@@ -77,47 +74,10 @@
   background-color: rgb(211, 152, 43);
 }
 
-.restaurants {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-}
-
-.restaurant {
-  display: flex;
-  background-color: rgb(235, 235, 235);
-  margin: 1rem;
-  width: 18%;
-  border-radius: 10px;
-  flex-direction: column;
-  padding-bottom: 1rem;
-  justify-content: center;
-}
-
-.restaurant img {
-  height: 100px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.restaurant h1 {
-  text-align: center;
-  padding: 0.5rem 0rem;
-}
-
-.restaurant p {
-  text-align: center;
-  margin: 0.5rem 0rem;
-}
-
-.restaurant div {
-  text-align: center;
-}
-
 /* Utility Style */
 .primary-heading {
   font-size: 4rem;
+  color: #dba225;
 }
 
 .secondary-heading {
